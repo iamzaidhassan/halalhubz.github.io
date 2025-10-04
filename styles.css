@@ -1,3 +1,4 @@
+
 :root{
   --bg:#ffffff;
   --fg:#0f172a;
@@ -11,9 +12,13 @@ body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
   color:var(--fg);
-  background: radial-gradient(1200px 800px at 70% -10%, #ecfdf5 10%, transparent 60%) ,
-              radial-gradient(800px 600px at -10% 80%, #f0fdf4 10%, transparent 60%) ,
-              var(--bg);
+  background:
+    radial-gradient(1200px 800px at 70% -10%, #ecfdf5 10%, rgba(255,255,255,0) 60%),
+    radial-gradient(900px 700px at -10% 90%, #f0fdf4 10%, rgba(255,255,255,0) 60%),
+    url('bg_pattern.svg');
+  background-size: auto, auto, 72px 72px;
+  background-attachment: fixed, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, repeat;
   display:grid;
   place-items:center;
   padding:24px;
@@ -26,6 +31,7 @@ body{
   padding:36px 32px 28px;
   box-shadow: 0 10px 30px rgba(2,6,23,0.08);
   text-align:center;
+  backdrop-filter: blur(2px);
 }
 .logo{
   height:64px;

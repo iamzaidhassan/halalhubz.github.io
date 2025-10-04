@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <g id="star">
+      <polygon points="36,8 40,24 56,28 40,32 36,48 32,32 16,28 32,24" fill="#10b981" opacity="0.06"/>
+    </g>
+  </defs>
+  <rect width="72" height="72" fill="white"/>
+  <use href="#star" x="0" y="0"/>
+  <use href="#star" x="36" y="0"/>
+  <use href="#star" x="0" y="36"/>
+  <use href="#star" x="36" y="36"/>
+</svg>
