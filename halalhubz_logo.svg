@@ -1,0 +1,22 @@
+<svg width="360" height="72" viewBox="0 0 360 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HalalHubz logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Location pin -->
+  <g transform="translate(8,8)">
+    <path d="M28 0C12.536 0 0 12.536 0 28c0 17.258 17.5 31.7 26.6 35.7a4 4 0 0 0 3.2 0C38.9 59.7 56 45.258 56 28 56 12.536 43.464 0 28 0z" fill="url(#g)"/>
+    <!-- inner white circle -->
+    <circle cx="28" cy="28" r="16" fill="#fff"/>
+    <!-- crescent -->
+    <path d="M38 18a14 14 0 1 1-14 14 12.5 12.5 0 0 0 14-14z" fill="#10b981"/>
+    <!-- small star -->
+    <polygon points="32,16 33.8,20.8 39,21 34.7,24 36,29 32,26.3 28,29 29.3,24 25,21 30.2,20.8" fill="#10b981"/>
+  </g>
+  <!-- Wordmark -->
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">
+    <text x="80" y="50">HalalHubz</text>
+  </g>
+</svg>
