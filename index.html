@@ -20,24 +20,63 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
       color:var(--fg);
       background:
-        radial-gradient(1200px 800px at 70% -10%, #ecfdf5 10%, rgba(255,255,255,0) 60%),
-        radial-gradient(900px 700px at -10% 90%, #f0fdf4 10%, rgba(255,255,255,0) 60%),
-        #ffffff;
-      background-attachment: fixed, fixed, fixed;
-      background-repeat: no-repeat, no-repeat, repeat;
+        radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #ffffff 100%);
+      background-attachment: fixed;
+      position: relative;
       display:grid;
       place-items:center;
       padding:24px;
+      min-height: 100vh;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(16, 185, 129, 0.03) 35px, rgba(16, 185, 129, 0.03) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(5, 150, 105, 0.03) 35px, rgba(5, 150, 105, 0.03) 70px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    body::after {
+      content: '';
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-30px); }
     }
     .card{
       width:min(820px, 92vw);
-      background:var(--card);
+      background:rgba(248, 250, 252, 0.95);
       border:1px solid #e2e8f0;
       border-radius:24px;
       padding:36px 32px 28px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+      box-shadow: 0 20px 60px rgba(2,6,23,0.12), 0 0 0 1px rgba(16, 185, 129, 0.1);
       text-align:center;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 1;
     }
     .logo{
       height:64px;
