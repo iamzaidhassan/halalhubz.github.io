@@ -5,18 +5,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HalalHubz — Coming Soon</title>
   <meta name="description" content="HalalHubz — Your Trusted Halal Food Guide. Launching Soon." />
-  <link rel="icon" type="image/png" href="favicon-512.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preload" as="image" href="halalhubz_logo.svg">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#0f172a;
+      --muted:#475569;
+      --accent:#10b981;
+      --card:#f8fafc;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      color:var(--fg);
+      background:
+        radial-gradient(1200px 800px at 70% -10%, #ecfdf5 10%, rgba(255,255,255,0) 60%),
+        radial-gradient(900px 700px at -10% 90%, #f0fdf4 10%, rgba(255,255,255,0) 60%),
+        #ffffff;
+      background-attachment: fixed, fixed, fixed;
+      background-repeat: no-repeat, no-repeat, repeat;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .card{
+      width:min(820px, 92vw);
+      background:var(--card);
+      border:1px solid #e2e8f0;
+      border-radius:24px;
+      padding:36px 32px 28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+      text-align:center;
+      backdrop-filter: blur(2px);
+    }
+    .logo{
+      height:64px;
+      margin:0 auto 12px;
+      display:block;
+    }
+    h1{
+      font-size:40px;
+      margin:6px 0 8px;
+      letter-spacing:.2px;
+    }
+    p{
+      margin:0 0 18px;
+      font-size:18px;
+      color:var(--muted);
+    }
+    
+    .verse-container {
+      margin: 24px 0;
+      padding: 28px 24px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-radius: 16px;
+      border: 1px solid #a7f3d0;
+    }
+    
+    .verse-icon {
+      margin: 0 auto 12px;
+      width: 32px;
+      height: 32px;
+    }
+    
+    .verse-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    
+    .verse-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--fg);
+      font-style: italic;
+      margin-bottom: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .verse-reference {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border:1px solid #e2e8f0;
+      background:#fff;
+      border-radius:999px;
+      font-size:15px;
+    }
+    .badge .dot{
+      width:10px;height:10px;border-radius:50%;background:var(--accent);
+      box-shadow:0 0 0 4px rgba(16,185,129,.18);
+    }
+    .footer{
+      margin-top:20px;
+      font-size:13px;
+      color:#64748b;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <main class="card">
-    <img class="logo" src="halalhubz_logo.svg" alt="HalalHubz logo">
+    <svg class="logo" width="360" height="72" viewBox="0 0 360 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HalalHubz logo">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#10b981"/>
+          <stop offset="100%" stop-color="#059669"/>
+        </linearGradient>
+      </defs>
+      <g transform="translate(8,8)">
+        <path d="M28 0C12.536 0 0 12.536 0 28c0 17.258 17.5 31.7 26.6 35.7a4 4 0 0 0 3.2 0C38.9 59.7 56 45.258 56 28 56 12.536 43.464 0 28 0z" fill="url(#g)"/>
+        <circle cx="28" cy="28" r="16" fill="#fff"/>
+        <path d="M38 18a14 14 0 1 1-14 14 12.5 12.5 0 0 0 14-14z" fill="#10b981"/>
+        <polygon points="32,16 33.8,20.8 39,21 34.7,24 36,29 32,26.3 28,29 29.3,24 25,21 30.2,20.8" fill="#10b981"/>
+      </g>
+      <g font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">
+        <text x="80" y="50">HalalHubz</text>
+      </g>
+    </svg>
+    
     <h1>HalalHubz</h1>
     <p>Your trusted halal food guide — launching soon.</p>
-    <div class="badge"><span class="dot"></span> contact: <a href="mailto:info@halalhubz.com">info@halalhubz.com</a></div>
+    
+    <div class="verse-container">
+      <div class="verse-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 7v10c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2z" stroke="#10b981" stroke-width="2" fill="none"/>
+          <path d="M3 7h18M8 5v14M16 5v14" stroke="#10b981" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="verse-label">Verse of the Day</div>
+      <div class="verse-text" id="verse-text">Loading...</div>
+      <div class="verse-reference" id="verse-reference"></div>
+    </div>
+    
+    <div class="badge">
+      <span class="dot"></span> 
+      contact: <a href="mailto:info@halalhubz.com">info@halalhubz.com</a>
+    </div>
+    
     <div class="footer">© 2025 HalalHubz By ZEM</div>
   </main>
+
+  <script>
+    // Collection of Quranic verses
+    const verses = [
+      {
+        text: "And We have certainly made the Quran easy for remembrance, so is there any who will remember?",
+        reference: "Quran 54:17"
+      },
+      {
+        text: "So remember Me; I will remember you. And be grateful to Me and do not deny Me.",
+        reference: "Quran 2:152"
+      },
+      {
+        text: "Indeed, Allah is with those who are patient.",
+        reference: "Quran 2:153"
+      },
+      {
+        text: "And He is with you wherever you are. And Allah, of what you do, is Seeing.",
+        reference: "Quran 57:4"
+      },
+      {
+        text: "Indeed, with hardship comes ease.",
+        reference: "Quran 94:6"
+      },
+      {
+        text: "O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient.",
+        reference: "Quran 2:153"
+      },
+      {
+        text: "And whoever relies upon Allah - then He is sufficient for him.",
+        reference: "Quran 65:3"
+      },
+      {
+        text: "Allah does not burden a soul beyond that it can bear.",
+        reference: "Quran 2:286"
+      },
+      {
+        text: "Verily, in the remembrance of Allah do hearts find rest.",
+        reference: "Quran 13:28"
+      },
+      {
+        text: "And He found you lost and guided you.",
+        reference: "Quran 93:7"
+      }
+    ];
+    
+    // Get day of year to show consistent verse per day
+    function getDayOfYear() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const diff = now - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay);
+    }
+    
+    // Display verse of the day
+    const dayIndex = getDayOfYear() % verses.length;
+    const todayVerse = verses[dayIndex];
+    
+    document.getElementById('verse-text').textContent = `"${todayVerse.text}"`;
+    document.getElementById('verse-reference').textContent = todayVerse.reference;
+  </script>
 </body>
 </html>
